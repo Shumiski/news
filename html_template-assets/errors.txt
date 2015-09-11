@@ -1,3 +1,0 @@
-[Thu Aug 20 2015 13:22:37 GMT-0300 (BRT)] layer "c-thumb1.jpg": Duplicate path: c-thumb1.jpg
-[Thu Aug 20 2015 13:22:58 GMT-0300 (BRT)] layer "c-thumb2.jpg": Duplicate path: c-thumb2.jpg
-[Thu Aug 20 2015 13:25:13 GMT-0300 (BRT)] layer "e-thumb1.jpg": Duplicate path: e-thumb1.jpg
