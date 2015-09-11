@@ -50,18 +50,18 @@ function theThumb($thumbName, $url){
 $featuredLinks = 3;
 
 
-$featured01Link = "http://techbeacon.com/state-iot-standards-stand-big-shakeout";
+$featured01Link = "http://techbeacon.com/were-all-testers-now-5-steps-get-ready-shift-left-automation";
 $featured01Cat = featured('category', $featured01Link);
 $featured01Title = featured('title', $featured01Link);
 
 
 
-$featured02Link = "http://techbeacon.com/23-front-end-performance-rules-web-applications";
+$featured02Link = "http://techbeacon.com/ops-approach-how-move-it-out-silo";
 $featured02Cat = featured('category', $featured02Link);
 $featured02Title = featured('title', $featured02Link);
 
 
-$featured03Link = "http://techbeacon.com/embrace-continuous-integration-app-delivery";
+$featured03Link = "http://techbeacon.com/how-devops-can-put-known-defects-endangered-species-list";
 $featured03Cat = featured('category', $featured03Link);
 $featured03Title = featured('title', $featured03Link);
 
@@ -69,9 +69,9 @@ $featured03Title = featured('title', $featured03Link);
 
 
 //Main Article
-$mainArticleLink = "http://techbeacon.com/business-strategy-meets-lean-startup-taking-lessons-agile";
-$mainArticleTitle = "Trimming the fat";
-$mainArticleText = "What is business strategy? Michael Porter presented a succinct definition in his seminal article in the Harvard Business Review, first published in 1996: 'The essence of strategy is choosing to perform activities differently than rivals do.'";
+$mainArticleLink = "http://techbeacon.com/when-agile-wrong-choice-your-organization";
+$mainArticleTitle = "Curb your enthusiasm";
+$mainArticleText = "A fellow agile trainer recently told me that many of his customers are fleeing scrum to get away from the zealots. I sighed and nodded in agreement—all too familiar with those agile enthusiasts who repeat the 'agile isn't a silver bullet' mantra—and then proceed to recommend it for everything.";
 
 
 //Trending
@@ -81,7 +81,7 @@ $trending01Cat = featured('category', $trending01Link);
 $trending01Title = featured('title', $trending01Link);
 
 
-$trending02Link = "http://techbeacon.com/17-best-practices-java-performance-engineering";
+$trending02Link = "http://techbeacon.com/smartwatch-oss-want-do-more-what-means-developers";
 $trending02Cat = featured('category', $trending02Link);
 $trending02Title = featured('title', $trending02Link);
 
@@ -96,33 +96,33 @@ $trending03Title = featured('title', $trending03Link);
 
 //Best of the Rest
 
-$best01Link = "http://techbeacon.com/agility-beyond-history%E2%80%94-legacy%E2%80%94-agile-development";
+$best01Link = "http://techbeacon.com/top-agile-tools-keep-software-engineers-productive";
 $best01Cat = 'AGILE';
 $best01Title = featured('title', $best01Link);
 
-$best02Link = "http://techbeacon.com/dockers-content-trust-good-step-security-flagged-containers-move-production";
+$best02Link = "http://techbeacon.com/5-tips-negotiating-raise-software-engineer";
 $best02Cat = 'APP DEV';
 $best02Title = featured('title', $best02Link);
 
-$best03Link = "http://techbeacon.com/detailed-analysis-isacas-10-key-devops-controls";
+$best03Link = "http://techbeacon.com/continuous-delivery-only-web-companies";
 $best03Cat = 'DEVOPS';
 $best03Title = featured('title', $best03Link);
 
-$best04Link = "http://techbeacon.com/smartwatch-oss-want-do-more-what-means-developers";
+$best04Link = "http://techbeacon.com/mobile-app-performance-optimizing-end-end-experience";
 $best04Cat = 'MOBILE';
 $best04Title = featured('title', $best04Link);
 
-$best05Link = "http://techbeacon.com/5-key-software-testing-steps-every-engineer-should-perform";
+$best05Link = "http://techbeacon.com/102-performance-engineering-questions-every-software-development-team-should-ask";
 $best05Cat = 'PERFORMANCE';
 $best05Title = featured('title', $best05Link);
 
-$best06Link = "http://techbeacon.com/highlights-2015-gartner-magic-quadrant-application-security-testing";
+$best06Link = "http://techbeacon.com/5-key-software-testing-steps-every-engineer-should-perform";
 $best06Cat = 'QUALITY';
 $best06Title = featured('title', $best06Link);
 
 
-$comingTitle = "We're all testers now: Get ready to shift-left with automation";
-$comingText = "With more and more companies making the shift-left with their development process, testing and automation is no longer just a QA activity. The role of developer/testers is also blurring, as more of the development activities we perform in an agile sprint are now become a function rather than a job title. So what does your team need to do in order to get ready to make the shift? Automation Awesomeness's Joe Colantonio explains.";
+$comingTitle = "The 'measure twice–cut once' mentality of test-driven development: Move your code forward";
+$comingText = "Electric Cloud CTO Anders Walgren walks through the benefits of TDD as part of one of the topics that will be discussed at the upcoming DevOps Enterprise Summit, which runs Oct. 19-21. Look for weekly stories on TechBeacon from key speakers, as well as deeper dives on topics from the conference before, during and after it.";
 
 
 ?>
