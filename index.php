@@ -5,6 +5,9 @@ include_once('inc/SimpleImage.php');
 include_once('inc/simple_html_dom.php');
 
 
+$validateThumbs = $_POST["validateThumbs"];
+
+
 function featured($elemento, $url){
 $html = file_get_html($url);
 $title = $html->find('h2', 1);
@@ -21,6 +24,9 @@ $category = $html->find('div.field-name-field-category a', 0);
 
 function theThumb($thumbName, $url){
     //Pega o elemento
+$validateThumbs = $_POST["validateThumbs"];
+if ($validateThumbs == "True"){
+    
     $html = file_get_html($url);
     $image = $html->find('div.field-name-field-image img', 0);    
     
@@ -39,6 +45,7 @@ function theThumb($thumbName, $url){
     } catch(Exception $e) {
         echo 'Error: ' . $e->getMessage();
     }
+} 
     
     echo 'html_template-assets/' . $thumbName . '.jpg';   
 }
@@ -50,18 +57,18 @@ function theThumb($thumbName, $url){
 $featuredLinks = 3;
 
 
-$featured01Link = "http://techbeacon.com/were-all-testers-now-5-steps-get-ready-shift-left-automation";
+$featured01Link = $_POST["featuredLink01"];
 $featured01Cat = featured('category', $featured01Link);
 $featured01Title = featured('title', $featured01Link);
 
 
 
-$featured02Link = "http://techbeacon.com/ops-approach-how-move-it-out-silo";
+$featured02Link = $_POST["featuredLink02"];
 $featured02Cat = featured('category', $featured02Link);
 $featured02Title = featured('title', $featured02Link);
 
 
-$featured03Link = "http://techbeacon.com/how-devops-can-put-known-defects-endangered-species-list";
+$featured03Link = $_POST["featuredLink03"];
 $featured03Cat = featured('category', $featured03Link);
 $featured03Title = featured('title', $featured03Link);
 
@@ -69,24 +76,24 @@ $featured03Title = featured('title', $featured03Link);
 
 
 //Main Article
-$mainArticleLink = "http://techbeacon.com/when-agile-wrong-choice-your-organization";
-$mainArticleTitle = "Curb your enthusiasm";
-$mainArticleText = "A fellow agile trainer recently told me that many of his customers are fleeing scrum to get away from the zealots. I sighed and nodded in agreement—all too familiar with those agile enthusiasts who repeat the 'agile isn't a silver bullet' mantra—and then proceed to recommend it for everything.";
+$mainArticleLink = $_POST["articleLink"];
+$mainArticleTitle = $_POST["articleTitle"];
+$mainArticleText = $_POST["articleText"];
 
 
 //Trending
 
-$trending01Link = "http://techbeacon.com/lessons-agile-happier-teams-are-more-productive-so-spread-cheer";
+$trending01Link = $_POST["trendingLink01"];
 $trending01Cat = featured('category', $trending01Link);
 $trending01Title = featured('title', $trending01Link);
 
 
-$trending02Link = "http://techbeacon.com/smartwatch-oss-want-do-more-what-means-developers";
+$trending02Link = $_POST["trendingLink02"];
 $trending02Cat = featured('category', $trending02Link);
 $trending02Title = featured('title', $trending02Link);
 
 
-$trending03Link = "http://techbeacon.com/13-ways-motivate-software-engineers";
+$trending03Link = $_POST["trendingLink03"];
 $trending03Cat = featured('category', $trending03Link);
 $trending03Title = featured('title', $trending03Link);
 
@@ -96,33 +103,33 @@ $trending03Title = featured('title', $trending03Link);
 
 //Best of the Rest
 
-$best01Link = "http://techbeacon.com/top-agile-tools-keep-software-engineers-productive";
+$best01Link = $_POST["bestLink01"];
 $best01Cat = 'AGILE';
 $best01Title = featured('title', $best01Link);
 
-$best02Link = "http://techbeacon.com/5-tips-negotiating-raise-software-engineer";
+$best02Link = $_POST["bestLink02"];
 $best02Cat = 'APP DEV';
 $best02Title = featured('title', $best02Link);
 
-$best03Link = "http://techbeacon.com/continuous-delivery-only-web-companies";
+$best03Link = $_POST["bestLink03"];
 $best03Cat = 'DEVOPS';
 $best03Title = featured('title', $best03Link);
 
-$best04Link = "http://techbeacon.com/mobile-app-performance-optimizing-end-end-experience";
+$best04Link = $_POST["bestLink04"];
 $best04Cat = 'MOBILE';
 $best04Title = featured('title', $best04Link);
 
-$best05Link = "http://techbeacon.com/102-performance-engineering-questions-every-software-development-team-should-ask";
+$best05Link = $_POST["bestLink05"];;
 $best05Cat = 'PERFORMANCE';
 $best05Title = featured('title', $best05Link);
 
-$best06Link = "http://techbeacon.com/5-key-software-testing-steps-every-engineer-should-perform";
+$best06Link = $_POST["bestLink06"];;
 $best06Cat = 'QUALITY';
 $best06Title = featured('title', $best06Link);
 
 
-$comingTitle = "The 'measure twice–cut once' mentality of test-driven development: Move your code forward";
-$comingText = "Electric Cloud CTO Anders Walgren walks through the benefits of TDD as part of one of the topics that will be discussed at the upcoming DevOps Enterprise Summit, which runs Oct. 19-21. Look for weekly stories on TechBeacon from key speakers, as well as deeper dives on topics from the conference before, during and after it.";
+$comingTitle = $_POST["comingTitle"];
+$comingText = $_POST["comingText"];
 
 
 ?>
