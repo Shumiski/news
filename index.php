@@ -23,9 +23,7 @@ $category = $html->find('div.field-name-field-category a', 0);
 }
 
 function theThumb($thumbName, $url){
-    //Pega o elemento
-$validateThumbs = $_POST["validateThumbs"];
-if ($validateThumbs == "True"){
+
     
     $html = file_get_html($url);
     $image = $html->find('div.field-name-field-image img', 0);    
@@ -45,10 +43,35 @@ if ($validateThumbs == "True"){
     } catch(Exception $e) {
         echo 'Error: ' . $e->getMessage();
     }
-} 
+ 
     
     echo 'html_template-assets/' . $thumbName . '.jpg';   
 }
+
+
+
+function theArticleImage($image){   
+    
+    //Pega apenas o src
+    $doc = new DOMDocument();
+    $doc->loadHTML($image);
+    $xpath = new DOMXPath($doc);
+    $src = $xpath->evaluate("string(//img/@src)"); # "/images/image.jpg"
+    
+    //Capta - Edita - Salva a imagem
+    try {
+        $img = new abeautifulsite\SimpleImage($src);
+        $img->fit_to_width(600);
+        $img->save('../html_template-assets/d-article-image.jpg', 100);
+    } catch(Exception $e) {
+        echo 'Error: ' . $e->getMessage();
+    }
+
+}
+
+
+//Salva Article Image
+theArticleImage($_POST["articleImage"]);
 
 
 
@@ -116,15 +139,15 @@ $best03Cat = 'DEVOPS';
 $best03Title = featured('title', $best03Link);
 
 $best04Link = $_POST["bestLink04"];
-$best04Cat = 'MOBILE';
+$best04Cat = 'PERFORMANCE';
 $best04Title = featured('title', $best04Link);
 
 $best05Link = $_POST["bestLink05"];;
-$best05Cat = 'PERFORMANCE';
+$best05Cat = 'QUALITY';
 $best05Title = featured('title', $best05Link);
 
 $best06Link = $_POST["bestLink06"];;
-$best06Cat = 'QUALITY';
+$best06Cat = 'TRENDS';
 $best06Title = featured('title', $best06Link);
 
 
